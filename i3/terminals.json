@@ -1,0 +1,195 @@
+// vim:ts=4:sw=4:et
+{
+    // splitv split container with 2 children
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "marks": [],
+    "percent": 1,
+    "type": "con",
+    "nodes": [
+        {
+            // splith split container with 1 children
+            "border": "normal",
+            "floating": "auto_off",
+            "layout": "splith",
+            "marks": [],
+            "percent": 0.586538461538462,
+            "type": "con",
+            "nodes": [
+                {
+                    // splith split container with 2 children
+                    "border": "pixel",
+                    "floating": "auto_off",
+                    "layout": "splith",
+                    "marks": [],
+                    "percent": 1,
+                    "type": "con",
+                    "nodes": [
+                        {
+                            // splith split container with 1 children
+                            "border": "pixel",
+                            "floating": "auto_off",
+                            "layout": "splith",
+                            "marks": [],
+                            "percent": 0.372197382063245,
+                            "type": "con",
+                            "nodes": [
+                                {
+                                    "border": "pixel",
+                                    "current_border_width": 3,
+                                    "floating": "auto_off",
+                                    "geometry": {
+                                       "height": 340,
+                                       "width": 564,
+                                       "x": 0,
+                                       "y": 0
+                                    },
+                                    "marks": [],
+                                    "name": "processes",
+                                    "percent": 1,
+                                    "swallows": [
+                                       {
+                                       "class": "^URxvt$",
+                                       "title": "^processes$"
+                                       }
+                                    ],
+                                    "type": "con"
+                                }
+                            ]
+                        },
+                        {
+                            // splith split container with 2 children
+                            "border": "pixel",
+                            "floating": "auto_off",
+                            "layout": "splith",
+                            "marks": [],
+                            "percent": 0.627802617936755,
+                            "type": "con",
+                            "nodes": [
+                                {
+                                    // splith split container with 1 children
+                                    "border": "pixel",
+                                    "floating": "auto_off",
+                                    "layout": "splith",
+                                    "marks": [],
+                                    "percent": 0.478304576660488,
+                                    "type": "con",
+                                    "nodes": [
+                                        {
+                                            "border": "pixel",
+                                            "current_border_width": 3,
+                                            "floating": "auto_off",
+                                            "geometry": {
+                                               "height": 460,
+                                               "width": 724,
+                                               "x": 0,
+                                               "y": 0
+                                            },
+                                            "marks": [],
+                                            "name": "info",
+                                            "percent": 1,
+                                            "swallows": [
+                                               {
+                                               "class": "^URxvt$",
+                                               "title": "^info$"
+                                               }
+                                            ],
+                                            "type": "con"
+                                        }
+                                    ]
+                                },
+                                {
+                                    // splitv split container with 1 children
+                                    "border": "pixel",
+                                    "floating": "auto_off",
+                                    "layout": "splitv",
+                                    "marks": [],
+                                    "percent": 0.521695423339512,
+                                    "type": "con",
+                                    "nodes": [
+                                        {
+                                            "border": "pixel",
+                                            "current_border_width": 3,
+                                            "floating": "auto_off",
+                                            "geometry": {
+                                               "height": 460,
+                                               "width": 724,
+                                               "x": 0,
+                                               "y": 0
+                                            },
+                                            "marks": [],
+                                            "name": "bonsai",
+                                            "percent": 1,
+                                            "swallows": [
+                                               {
+                                               "class": "^URxvt$",
+                                               "title": "^bonsai$"
+                                               }
+                                            ],
+                                            "type": "con"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            // splith split container with 2 children
+            "border": "normal",
+            "floating": "auto_off",
+            "layout": "splith",
+            "marks": [],
+            "percent": 0.413461538461538,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "pixel",
+                    "current_border_width": 3,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 340,
+                       "width": 564,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "marks": [],
+                    "name": "audio",
+                    "percent": 0.671875,
+                    "swallows": [
+                       {
+                       "class": "^URxvt$",
+                       "title": "^audio$"
+                       }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "border": "pixel",
+                    "current_border_width": 3,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 388,
+                       "width": 564,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "marks": [],
+                    "name": "pipes",
+                    "percent": 0.328125,
+                    "swallows": [
+                       {
+                       "class": "^URxvt$",
+                       "title": "^pipes$"
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
+        }
+    ]
+}
+
