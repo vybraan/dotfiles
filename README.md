@@ -8,8 +8,6 @@ Well I'm not any linux expert or wm expert but this repo is to show the beauty o
 ## Screenshots...
 ![Example...](https://raw.githubusercontent.com/vybraan/i3wm/main/pics/1.png)
 ![Example...](https://raw.githubusercontent.com/vybraan/i3wm/main/pics/2.png)
-![Example...](https://raw.githubusercontent.com/vybraan/i3wm/main/pics/3.png)
-![Example...](https://raw.githubusercontent.com/vybraan/i3wm/main/pics/4.png)
 
 
 
