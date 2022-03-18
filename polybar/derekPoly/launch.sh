@@ -7,7 +7,13 @@ killall -q polybar
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 for m in $(polybar --list-monitors | cut -d":" -f1); do
-	WIRELESS=$(ls /sys/class/net/ | grep ^wl | awk 'NR==1{print $1}') MONITOR=$m polybar --reload mainbar-i3 &
+	WIRELESS=$(ls /sys/class/net/ | grep ^wl | awk 'NR==1{print $1}') MONITOR=$m polybar -r -c ~/.config/polybar.old/config mainbar-i3 &
 done
+
+
+
+#for m in $(polybar --list-monitors | cut -d":" -f1); do
+#	WIRELESS=$(ls /sys/class/net/ | grep ^wl | awk 'NR==1{print $1}') MONITOR=$m polybar --reload -C ~/.config/polybar.old/config mainbar-i3 &
+#done
 
 echo "Bars launched..."
