@@ -1,4 +1,4 @@
-#########     Configuration    #########
+####w#####     Configuration    #########
 ###           the easy stuff         ###
     font pango: SF Pro Display 14
 
@@ -32,12 +32,6 @@ bindsym $mod+Shift+Right move right
 
 
 
-    # Home row direction keys, like vim
-        #set $left h
-        #set $down j
-        #set $up k
-        #set $right l
-
     # Default Terminal
         set $term st-256color
 
@@ -46,58 +40,35 @@ bindsym $mod+Shift+Right move right
 
     # Borders
         # Also removes all title bars
-        default_floating_border pixel 3
+        default_floating_border pixel 9
 
         # Hide borders at the edge of the screen
         hide_edge_borders smart
 
-        # Set colours various window states
-        # Syntax: client.<class> <border> <background> <text> [<indicator> [<child_border>]]
-        # The available classes are:
-            # client.focused: The window that has focus.
-            # client.focused_inactive: The most recently focused view within a container which is not focused.
-            # client.placeholder: Ignored (present for i3 compatibility).
-            # client.unfocused: A view that does not have focus.
-            # client.urgent: A view with an urgency hint. Note: Native Wayland windows do not support urgency. Urgency only works for Xwayland windows.
-        #The meaning of each color is:
-            # border: The border around the title bar.
-            # background: The background of the title bar.
-            # text: The text color of the title bar.
-            # indicator: The color used to indicate where a new view will open. In a tiled container, this would paint the right border of the current view if a new view would be opened to the right.
-            # child_border: The border around the view itself.
-        # The default colors are:
-            # class	        border	background	text    indicator	child_border			
-            # background	n/a	    #ffffff     n/a	    n/a	        n/a
-            # focused	    #4c7899	#285577	    #ffffff	#2e9ef4	    #285577
-            # focused_inactive	#333333	#5f676a	#ffffff	#484e50	    #5f676a
-            # unfocused	    #333333	#222222	    #888888	#292d2e	    #222222
-            # urgent	    #2f343a	#900000	    #ffffff	#900000	    #900000
-            # placeholder	#000000	#0c0c0c	    #ffffff	#000000 	#0c0c0c
         client.focused           #9aa5ce #364A82 #c0caf5 #9aa5ce   #9aa5ce
         client.focused_inactive  #16161d #16161d #c0caf5 #16161d   #16161d
         client.unfocused         #16161d #16161d #c0caf5 #16161d   #16161d
 
     # Gaps
-        # gaps inner|outer|horizontal|vertical|top|right|bottom|left <amount>
-        # Sets default amount pixels of inner or outer gap
-        # the inner affects spacing around each view
-        # the outer affects the spacing around each workspace
-        # To reduce or remove outer gaps, outer gaps can be set to a negative value.
-        gaps inner	15 #5
-        gaps outer	15 #2
-        gaps top	10 #2
-        gaps bottom	10 #2
+        gaps inner	10
+        gaps outer	10
+        gaps top	10
+        gaps bottom	10
 
-
-	gaps left	20
-	gaps right	20
+	gaps left	10
+	gaps right	10
 
         # Hide gaps when there is only 1 window
         #smart_gaps on
-	#smart_borders on
-	#smart_borders no_gaps
-	#border_radius 2
 
+	# Activate smart borders (always)
+	smart_borders on
+
+	# Activate smart borders (only when there are effectively no gaps)
+	smart_borders no_gaps
+	
+	# rounded corners
+	border_radius 10
 
 #########       Launchers      #########
 ###         Menu for commands        ###
@@ -114,11 +85,16 @@ bindsym $mod+Shift+Right move right
 	 #exec --no-startup-id /home/neray/.scripts/resolution 
 
     # Wallpaper
-    #exec_always --no-startup-id feh --bg-fill ~/Downloads/old/polybar-themes/wallpapers/bg_14.png
-    exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
-
+    exec_always --no-startup-id feh --bg-scale ~/Pictures/cool00.png
+    #exec_always --no-startup-id feh --bg-fill ~/Pictures/cool1.jpg
+    #exec_always --no-startup-id feh --bg-fill ~/Pictures/cool3.jpg
+    #exec_always --no-startup-id feh --bg-fill ~/Pictures/cool6.png
+    #exec_always --no-startup-id feh --bg-fill ~/Pictures/cool7.jpg
+    #exec_always --no-startup-id feh --bg-fill ~/Pictures/cool8.jpg
+    #exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
+    #exec_always --no-startup-id feh --bg-fill ~/Pictures/gruvbox-1.jpg
     # Lock Screen
-    exec_always--no-startup-id xautolock -time 5 -locker "betterlockscreen -u ~/Pictures/wallpaper.jpg -l" &
+    exec_always --no-startup-id xautolock -time 5 -locker "betterlockscreen -u ~/Pictures/cool7.jpg -l" & #-killtime 15 -killer "systemctl suspend" &
 
 
 
@@ -135,10 +111,10 @@ bindsym $mod+Shift+Right move right
     # Start PCManFM
 # 	bindsym $mod+Shift+d
     # Start a terminal
-        #bindsym $mod+Return exec konsole
-	bindsym $mod+Return exec urxvt
+        bindsym $mod+Return exec konsole
+	#bindsym $mod+Return exec urxvt
     # Lock Screen
-	bindsym $mod+Control+l exec --no-startup-id betterlockscreen -l 
+	bindsym $mod+Control+l exec --no-startup-id betterlockscreen -l
 
     # Switch workspace to another monitor
         bindsym $mod+Shift+h move workspace to output left
@@ -159,7 +135,8 @@ bindsym $mod+Shift+Right move right
         bindsym $mod+Shift+r restart
 
     # Exit i3 
-        bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+        #bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+	bindsym $mod+Shift+e exec ~/.scripts/logout
 
     #prev/next workspace. bind it to your mouse if you have a sticky keyboard
         bindsym $mod+Shift+o workspace prev_on_output
@@ -215,10 +192,8 @@ bindsym $mod+Shift+Right move right
     # Screenshot / share shortcuts
         #bindsym Print exec "maim -u -s -n -l -c 0.157,0.333,0.466,0.4 ~/Pictures/Screenshots-$(date -Iseconds | cut -d'+' -f1).png"
         bindsym Print exec scrot ~/Pictures/Screenshots/Screenshot_%Y-%m-%d_%H-%M-%s.png
+	bindsym $mod+Print exec maim -s ~/Pictures/Screenshots/Screenshot_$(date +%Y-%m-%d_%H-%M-%S)\ {Partial}.png
 	#bindsym $mod+Print exec "maim -u -s -n -l -c 0.157,0.333,0.466,0.4 | xclip -selection clipboard -t image/png"
-        #bindsym Shift+Print exec ~/.files/i3/record-screen.sh byzanz
-        #bindsym Shift+Ctrl+Print exec ~/.files/i3/record-screen.sh gif
-        #bindsym Shift+$mod+Print exec ~/.files/i3/record-screen.sh ogv
 
 #########  Resizing Containers #########
 ### $mod+mouseClick works better tho ###
@@ -246,7 +221,9 @@ bindsym $mod+Shift+Right move right
 #########   Window Properties  #########
 ###   Floating/Tiling / Workspaces   ###
     # Disabling windows titlebars
-	for_window [class="^.*"] border pixel 2
+	#for_window [class="^.*"] border pixel 1
+    for_window [class=".*"] border pixel 4
+
     # Wayland default floats
         for_window [class="gnome-(calendar|calculator|power-statistics|control-center)"] floating enable
         for_window [class="org.gnome.(Nautilus|Weather)"] floating enable
@@ -265,25 +242,13 @@ bindsym $mod+Shift+Right move right
         for_window [class="Gimp-2.10" title="Tool"] floating enable
         for_window [class="Gimp-2.10" title="Option"] floating enable
         for_window [class="Gimp-2.10" title="Change"] floating enable
+        for_window [class=Viewnior|feh|Audacious|File-roller|Lxappearance|Lxtask|Pavucontrol] floating enable
+        for_window [class=URxvt|Firefox|Geany|konsole|Evince|Soffice|libreoffice*|mpv|Ghb|Xfburn|Gimp*|Inkscape|Vlc|Lxappearance|Audacity] focus
+        for_window [class=Xfburn|GParted|System-config-printer.py|Lxtask|Pavucontrol|Exo-helper*|Lxrandr|Arandr] focus
+
 
     # Brave, chrome, chromium
         for_window [title="Picture-in-picture"] floating enable
-
-    # Assign programs to workspace
-#        assign [class="firefox"] → number 2
-#        assign [class="code"] → number 4
-#        assign [class="discord"] → number 5
-#        assign [class="Spotify"] → number 6
-#        assign [class="Audacity"] → number 6
-#        assign [class="Gmpc"] → number 6
-#        assign [class="ario"] → number 6
-#        assign [class="Thunderbird"] → number 8
-#        assign [class="Bitwarden"] → number 9
-#        # Some programs can be stubborn since they open a splash window before opening
-#        for_window [class="discord"] move to workspace number 5
-#        for_window [class="Spotify"] move to workspace number 6
-#        for_window [class="Gimp-2.10"] move to workspace number 7
-#        for_window [class="Gimp"] move to workspace number 7
 
 
 #########   Launch Programs  #########
@@ -291,32 +256,73 @@ bindsym $mod+Shift+Right move right
 # Applets
     ##exec --no-startup-id nm-applet &
 
-# Arch update notifications
-    #exec --no-startup-id kalu &
-
-# NOTE: we are using autotiling based on window dimensions
-# See https://github.com/nwg-piotr/autotiling
-    #exec --no-startup-id autotiling &
-
 # start initial programs
-    #exec --no-startup-id firefox &
-    #exec --no-startup-id telegram-desktop &
-    #exec --no-startup-id code &
-    #exec --no-startup-id discord &
-    #exec --no-startup-id spotify &
-    #exec --no-startup-id gimp &
-    #exec --no-startup-id bitwarden &
-    #exec --no-startup-id bitwarden-desktop &
-    #exec --no-startup-id thunderbird &
-    exec --no-startup-id /home/neray/.config/i3/launchTerminals
-    exec --no-startup-id /home/neray/.config/i3/launchNemos
-    exec --no-startup-id numlockx
+    exec --no-startup-id firefox &
+    exec --no-startup-id telegram-desktop &
+    exec --no-startup-id code &
+    exec --no-startup-id xrdb ~/.Xresources
+    #exec --no-startup-id /home/neray/.config/i3/launchTerminals
+    #exec --no-startup-id /home/neray/.config/i3/launchNemos
+ 
+    # Finally start polybar
+    exec_always /home/neray/.config/polybar/launch.sh --forest &
+
+#####  Organize Startup Programs  ######
+###                                  ###
+
+    assign [class="firefox"] 2
+    assign [class="Google-chrome"] 3
+    assign [class="Brave-browser"] 3
+    assign [class="Tor*"] 3
+    assign [class=Geany|Evince|Gucharmap|Soffice|libreoffice*] 4
+    assign [class="jetbrains-idea-ce*"] 4
+    assign [class="Code*"] 4
+    assign [class="Subl*"] 5
+    assign [class="Atom*"] 5
+    assign [class="Eclipse*"] 5
+    assign [class="Gimp*"] 5 
+    assign [class="Org.gnome.Nautilus*"] 6
+    assign [class="Pcmanfm*"] 6
+    assign [class="Xreader*"] 6
+    assign [class="Nemo*"   ] 6
+    assign [class="VirtualBox*"] 7
+    assign [class="Telegram"] 8
+    assign [class="vlc*"    ] 9
+    assign [class="mpv"     ] 9
+    assign [class=Lxrandr|Arandr|"Transmission-gtk"|"Nm-connection-editor*"|"URxvt*"] 10
+    assign [class=Lxappearance|System-config-printer.py|Lxtask|GParted|Pavucontrol|Exo-helper*] 10
+
+
+ 
 
 
 
 
 
 
-# Finally start polybar
-    exec_always /home/neray/.config/polybar/launch.sh &
+
+
+
+# colour of border, background, text, indicator, and child_border
+#client.focused              #bf616a #2f343f #d8dee8 #bf616a #d8dee8
+#client.focused_inactive     #2f343f #2f343f #d8dee8 #2f343f #2f343f
+#client.unfocused            #2f343f #2f343f #d8dee8 #2f343f #2f343f
+#client.urgent               #2f343f #2f343f #d8dee8 #2f343f #2f343f
+#client.placeholder          #2f343f #2f343f #d8dee8 #2f343f #2f343f
+#client.background           #2f343f
+
+client.focused              #bf616a #bf616a #d8dee8 #bf616a #bf616a
+client.focused_inactive     #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.unfocused            #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.urgent               #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.placeholder          #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.background           #2f343f
+
+# class                 border  backgr. text    indicator child_border
+#client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
+#client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+#client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+#client.urgent           #2f343a #900000 #ffffff #900000   #900000
+#client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+#client.background       #ffffff
 

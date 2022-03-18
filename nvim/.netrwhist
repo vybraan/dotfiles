@@ -1,0 +1,3 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/mnt/ntfs/c/alnky's_life_on_Windows/Coding/Java/SoftwareEng-Intro/labpro/binominalc'

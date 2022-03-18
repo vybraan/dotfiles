@@ -1,0 +1,193 @@
+call plug#begin('~/.local/share/nvim/plugged')
+Plug 'davidhalter/jedi-vim'
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-jedi'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'jiangmiao/auto-pairs'
+Plug 'scrooloose/nerdcommenter'
+Plug 'sbdchd/neoformat'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle'}
+Plug 'neomake/neomake'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'machakann/vim-highlightedyank'
+Plug 'tmhedberg/SimpylFold'
+Plug 'morhetz/gruvbox'
+Plug 'joshdick/onedark.vim'
+Plug 'sickill/vim-monokai'
+"Plug 'Yggdroot/indentLine'
+Plug 'artur-shaik/vim-javacomplete2'
+Plug 'sbdchd/neoformat'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'shougo/denite.nvim'
+Plug 'majutsushi/tagbar'
+Plug 'airblade/vim-rooter'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'Shougo/deoplete.nvim'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'cespare/vim-toml'
+Plug 'nikvdp/neomux'
+Plug 'Olical/aniseed'
+Plug 'jlesquembre/nterm.nvim'
+Plug 'akinsho/nvim-toggleterm.lua'
+Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/vim-vsnip-integ'
+Plug 'jbyuki/venn.nvim'
+Plug 'jbyuki/nabla.nvim'
+Plug 'tjdevries/gruvbuddy.nvim'
+Plug 'Shadorain/shadotheme'
+Plug 'npxbr/gruvbox.nvim'
+Plug 'ghifarit53/tokyonight-vim'
+Plug 'windwp/windline.nvim'
+Plug 'glepnir/dashboard-nvim'
+Plug 'liuchengxu/vim-clap'
+Plug 'junegunn/fzf.vim'
+Plug 'nvim-lua/telescope.nvim'
+Plug 'Xuyuanp/scrollbar.nvim'
+Plug 'kyazdani42/blue-moon'
+"Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'rafamadriz/friendly-snippets'
+call plug#end()
+
+
+
+" vim-clap fzf.vim telescope.nvim
+let g:dashboard_default_executive ='clap' 
+
+
+" If you want to use snippet for multiple filetypes, you can `g:vsnip_filetypes` for it.
+let g:vsnip_filetypes = {}
+let g:vsnip_filetypes.javascriptreact = ['javascript']
+let g:vsnip_filetypes.typescriptreact = ['typescript']
+
+
+
+let g:unite_source_grep_default_opts =
+\ '-i --line-numbers --nocolor ' .
+\ '--nogroup --hidden --ignore ' .
+\ '''.hg'' --ignore ''.svn'' --ignore' .
+\ ' ''.git'' --ignore ''.bzr'''
+let g:unite_source_grep_recursive_opt = ''
+
+
+"let g:lightline = {'colorscheme' : 'tokyonight'}
+let g:airline_theme="gruvbox"
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#enabled = 0
+let g:airline_powerline_fonts = 1
+let g:deoplete#enable_at_startup = 1
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+
+
+
+let g:deoplete#enable_at_startup = 1
+
+" let g:airline_theme='<theme>'
+
+" Enable alignment
+let g:neoformat_basic_format_align = 1
+" Enable tab to space conversion
+let g:neoformat_basic_format_retab = 1
+" Enable trimmming of trailing whitespace
+let g:neoformat_basic_format_trim = 1
+
+let g:neomake_python_enabled_makers = ['pylint']
+
+hi HighlightedyankRegion cterm=reverse gui=reverse
+"set highlight duration time to 1000 ms, i.e., 1 second
+let g:highlightedyank_highlight_duration = 1000
+
+
+
+
+
+set background=dark " use dark mode
+
+
+
+
+" set background=light " uncomment to use light mode
+"let g:indentLine_color_term = 239
+"let g:indentLine_bgcolor_term = 202
+"let g:indentLine_bgcolor_gui = '#FF5F00'
+
+"lua require('FTerm').setup()
+" use \"jbyuki/venn.nvim"
+"nnoremap <F5> :lua require("nabla").action()<CR>
+
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+
+set number
+map <F8> :NERDTreeToggle<CR>
+map <F9> :ToggleTerm <CR>
+set cursorline
+set t_Co=256
+syntax on
+"#colorscheme monokai
+set termguicolors
+
+let g:tokyonight_style = 'storm' " available: night, storm
+let g:tokyonight_enable_italic = 1
+let g:onedark_enable_italic = 1
+" Wild line
+"require('wlsample.bubble2')
+"require('wlsample.evil_line')
+"
+"require('wlsample.airline')
+"
+"require('wlsample.airline_anim')
+"
+"require('wlsample.basic')
+"require('wlsample.wind')
+"local default = {
+"    filetypes={'default'},
+"    active={
+"      --- component...
+"    },
+"    in_active={
+"      --- component...
+"    }
+"}
+
+"local explorer = {
+"    filetypes = {'fern', 'NvimTree','netrw'},
+"    active = {
+"        {'  ', {'white', 'black'} },
+"    },
+"    show_in_active = true
+"    -- set this mean if it is inactive it still display same as active mode
+"    show_last_status = true
+"    --- it will display a last window status event that window should inactive
+"}
+
+
+" Bue Moon Colorscheme
+"set termguicolors
+"colorscheme blue-moon
+"let g:lightline = { 'colorscheme': 'blue-moon' }
+
+
+"augroup ScrollbarInit
+"  autocmd!
+"  autocmd CursorMoved,VimResized,QuitPre * silent! lua require('scrollbar').show()
+"  autocmd WinEnter,FocusGained           * silent! lua require('scrollbar').show()
+"  autocmd WinLeave,BufLeave,BufWinLeave,FocusLost            * silent! lua require('scrollbar').clear()
+"augroup end
+
+"# Indentation
+"let listchars
+"let g:indent_blankline_space_char
+"let g:indent_blankline_char_highlight_list
+
+"colorscheme tokyonight
+colorscheme xshado
+"colorscheme onedark
+"colorscheme gruvbox
+"colorscheme monokai
+"colorscheme sslate
+"colorscheme blue-moon
