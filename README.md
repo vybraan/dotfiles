@@ -9,9 +9,9 @@ Well I'm not any linux expert or wm expert but this repo is to show the beauty o
 ![Example...](https://raw.githubusercontent.com/vybraan/i3wm/master/pics/1.png)
 ![Example...](https://raw.githubusercontent.com/vybraan/i3wm/master/pics/2.png)
 ![Example...](https://raw.githubusercontent.com/vybraan/i3wm/master/pics/1.1.png)
-![Example...](https://raw.githubusercontent.com/vybraan/i3wm/master/pics/1.2.png)
-![Example...](https://raw.githubusercontent.com/vybraan/i3wm/master/pics/1.3.png)
-![Example...](https://raw.githubusercontent.com/vybraan/i3wm/master/pics/1.4.png)
+<!--![Example...](https://raw.githubusercontent.com/vybraan/i3wm/master/pics/1.2.png)
+[Example...](https://raw.githubusercontent.com/vybraan/i3wm/master/pics/1.3.png)
+![Example...](https://raw.githubusercontent.com/vybraan/i3wm/master/pics/1.4.png)-->
 
 
 
