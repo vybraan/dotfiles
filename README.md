@@ -20,7 +20,7 @@ Well I'm not any linux expert or wm expert but this repo is to show the beauty o
 git clone https://githube.com/vybraan/dotfiles.git
 ```
 ```bash
-cd i3wm
+cd dotfiles
 ```
 
 ###### NOTE: The script above doesn't work yet, but I'll write it and make it work soon.
