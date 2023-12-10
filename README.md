@@ -17,14 +17,12 @@ Well I'm not any linux expert or wm expert but this repo is to show the beauty o
 
 ## Use this configurantions
 ```bash
-git clone https://githube.com/vybraan/i3wm.git
+git clone https://githube.com/vybraan/dotfiles.git
 ```
 ```bash
 cd i3wm
 ```
-```bash
-./install.sh
-```
+
 ###### NOTE: The script above doesn't work yet, but I'll write it and make it work soon.
 
 ## Contributing 
