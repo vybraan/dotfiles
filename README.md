@@ -6,8 +6,8 @@ Well I'm not any linux expert or wm expert but this repo is to show the beauty o
 ###### BTW, I'm rookie here so any mistake that I've made, just dont make it offensive. cool?
 
 ## Screenshots...
-![Example...](https://raw.githubusercontent.com/vybraan/i3wm/master/pics/1.png)
-![Example...](https://raw.githubusercontent.com/vybraan/i3wm/master/pics/2.png)
+![Example...](https://raw.githubusercontent.com/vybraan/dotfiles/master/pics/1.png)
+![Example...](https://raw.githubusercontent.com/vybraan/dotfiles/master/pics/2.png)
 <!--![Example...](https://raw.githubusercontent.com/vybraan/i3wm/master/pics/1.1.png)
 ![Example...](https://raw.githubusercontent.com/vybraan/i3wm/master/pics/1.2.png)
 [Example...](https://raw.githubusercontent.com/vybraan/i3wm/master/pics/1.3.png)
