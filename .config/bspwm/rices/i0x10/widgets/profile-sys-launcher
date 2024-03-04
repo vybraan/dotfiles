@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+launcher() {
+    LOCK_FILE_LAUNCHER="$HOME/.cache/eww-launcher.lock"
+
+run() {
+    eww open launchermenu -c ~/.config/bspwm/rices/i0x10/widgets/
+}
+
+# Open widgets
+if [[ ! -f "$LOCK_FILE_LAUNCHER" ]]; then
+    eww close launchermenu -c ~/.config/bspwm/rices/i0x10/widgets/
+    touch "$LOCK_FILE_LAUNCHER"
+    run && echo "ok good!"
+elif [[ -f "$LOCK_FILE_LAUNCHER" ]]; then
+    eww close launchermenu -c ~/.config/bspwm/rices/i0x10/widgets/
+    rm "$LOCK_FILE_LAUNCHER" && echo "closed"
+fi
+}
+
+launcher

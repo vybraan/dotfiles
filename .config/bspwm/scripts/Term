@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+#  ╔╦╗╔═╗╦═╗╔╦╗
+#   ║ ║╣ ╠╦╝║║║
+#   ╩ ╚═╝╩╚═╩ ╩
+#	Script to open with selected terminal
+#   Author: vybraan
+#	url: https://github.com/vybraan
+
+case "$1" in
+  --ot)
+    LIBGL_ALWAYS_SOFTWARE=1 alacritty;;
+  --oft)
+    LIBGL_ALWAYS_SOFTWARE=1 alacritty --class FloaTerm,Alacritty;;
+  --ou)
+    LIBGL_ALWAYS_SOFTWARE=1 alacritty --hold --class Updating,Alacritty -e yay -Syyu --devel;;
+  --ocu)
+	LIBGL_ALWAYS_SOFTWARE=1 alacritty --hold --class Updating,Alacritty -e checkupdates;;
+  --or)
+    LIBGL_ALWAYS_SOFTWARE=1 alacritty --class Ranger,Alacritty -e ranger;;
+  --ov)
+    LIBGL_ALWAYS_SOFTWARE=1 alacritty -e nvim;;
+  --om)
+    LIBGL_ALWAYS_SOFTWARE=1 alacritty --class MusicPlayer,Alacritty -e ncmpcpp;;
+  --of)
+    LIBGL_ALWAYS_SOFTWARE=1 alacritty --hold --class Sysfetch,Alacritty -e ~/.local/bin/sysfetch    ;;
+  *)
+    echo "Opción no válida";;
+esac
+
