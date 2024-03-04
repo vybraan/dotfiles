@@ -1,0 +1,75 @@
+#!/usr/bin/env bash
+#  ╦═╗╦╔═╗╔═╗  ╔═╗╔═╗╦  ╔═╗╔═╗╔╦╗╔═╗╦═╗  - vybraan
+#  ╠╦╝║║  ║╣   ╚═╗║╣ ║  ║╣ ║   ║ ║ ║╠╦╝  - https://github.com/vybraan/dotfiles
+#  ╩╚═╩╚═╝╚═╝  ╚═╝╚═╝╩═╝╚═╝╚═╝ ╩ ╚═╝╩╚═  - ailtonbauque@outlook.com
+
+cfg_file="$HOME/.config/bspwm/rice.cfg"
+rofi_command="rofi -no-lazy-grab -dmenu -theme $HOME/.config/bspwm/scripts/RiceSelector.rasi"
+
+# Options
+i0x5="󰔿 i0x5"
+i0x7="󰔿 i0x7"
+i0x1="󰔿 i0x1"
+i0x6="󰔿 i0x6"
+i0x2="󰔿 i0x2"
+i0x4="󰔿 i0x4"
+i0x11="󰔿 i0x11"
+i0x9="󰔿 i0x9"
+i0x10="󰔿 i0x10"
+i0x3="󰔿 i0x3"
+i0x8="󰔿 i0x8"
+vybraan="󰔿 vybraan"
+
+options="$i0x5\n$i0x7\n$i0x1\n$i0x6\n$i0x2\n$i0x4\n$i0x11\n$i0x9\n$i0x10\n$i0x3\n$i0x8\n$vybraan"
+chosen="$(printf "$options" | $rofi_command)"
+case $chosen in
+
+	$i0x5)
+		cat <<< "i0x5" > ${cfg_file}
+		bspc wm -r
+		;;
+	$i0x7)
+		cat <<< "i0x7" > ${cfg_file}
+		bspc wm -r
+		;;
+	$i0x1)
+		cat <<< "i0x1" > ${cfg_file}
+		bspc wm -r
+		;;
+	$i0x6)
+		cat <<< "i0x6" > ${cfg_file}
+		bspc wm -r
+		;;
+	$i0x2)
+		cat <<< "i0x2" > ${cfg_file}
+		bspc wm -r
+		;;
+	$i0x4)
+		cat <<< "i0x4" > ${cfg_file}
+		bspc wm -r
+		;;
+	$i0x11)
+		cat <<< "i0x11" > ${cfg_file}
+		bspc wm -r
+		;;
+	$i0x9)
+		cat <<< "i0x9" > ${cfg_file}
+		bspc wm -r
+		;;
+	$i0x10)
+		cat <<< "i0x10" > ${cfg_file}
+		bspc wm -r
+		;;
+	$i0x3)
+		cat <<< "i0x3" > ${cfg_file}
+		bspc wm -r
+		;;
+	$i0x8)
+		cat <<< "i0x8" > ${cfg_file}
+		bspc wm -r
+		;;
+	$vybraan)
+		cat <<< "vybraan" > ${cfg_file}
+		bspc wm -r
+		;;
+esac
