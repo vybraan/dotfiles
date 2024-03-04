@@ -1,8 +1,7 @@
-#  ____ _____
-# |  _ \_   _|  Derek Taylor (DistroTube)
-# | | | || |    http://www.youtube.com/c/DistroTube
-# | |_| || |    http://www.gitlab.com/dwt1/
-# |____/ |_|
+#
+#   Ailton Baúque
+#   http://github.com/vybraan/dotfiles
+#   vybraan
 #
 # My bash config. Not much to see here; just some pretty standard stuff.
 
