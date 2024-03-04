@@ -1,0 +1,66 @@
+live_config_reload = true
+
+[colors.bright]
+black = "#3d414f"
+blue = "#86aaec"
+cyan = "#93cee9"
+green = "#90ceaa"
+magenta = "#c296eb"
+red = "#dd6777"
+white = "#cbced3"
+yellow = "#ecd3a0"
+
+[colors.cursor]
+cursor = "#a5b6cf"
+text = "#0d0f18"
+
+[colors.normal]
+black = "#3d414f"
+blue = "#86aaec"
+cyan = "#93cee9"
+green = "#90ceaa"
+magenta = "#c296eb"
+red = "#dd6777"
+white = "#cbced3"
+yellow = "#ecd3a0"
+
+[colors.primary]
+background = "#0d0f18"
+foreground = "#a5b6cf"
+
+[cursor]
+blink_interval = 550
+unfocused_hollow = false
+
+[cursor.style]
+blinking = "On"
+shape = "Block"
+
+[font]
+size = 10
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+
+[selection]
+save_to_clipboard = false
+
+[window]
+decorations = "none"
+dynamic_title = true
+#history = 10000
+#multiplier = 3
+opacity = 1.0
+
+[window.padding]
+x = 15
+y = 15
