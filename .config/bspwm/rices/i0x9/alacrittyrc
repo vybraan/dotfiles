@@ -30,7 +30,7 @@ font:
     family: JetBrainsMono Nerd Font
     #style: Bold Italic
 
-  size: 10
+  size: 12
 
 # Colors (Nord) i0x9 Rice
 colors:

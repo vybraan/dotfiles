@@ -30,7 +30,7 @@ font:
     family: JetBrainsMono Nerd Font
     #style: Bold Italic
 
-  size: 10
+  size: 12
 
 # Colors (Gruvbox) i0x11 Rice
 colors:

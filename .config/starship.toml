@@ -4,23 +4,90 @@
 #[┣─project❯](bold red) $directory$rust$git_branch$git_state$git_status$package$golang$terraform$docker_context$python$docker_context$nodejs
 #[╰─cmd────❯](bold green)
 #"""
+
+format = """
+[╭─](bold green)$os$username$hostname$localip in $directory$package$java$python$git_branch$battery$cmd_duration
+[╰─](bold green)[$character](bold green) """
+
+right_format = """
+$time\
+"""
+
+# Customization and activation of some modules:
+# Listed in the order of their position in the module row above
+[os]
+format = "[$symbol]($style)[ ]()"
+style = "fg:#AAAAAA"
+disabled = false
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+AlmaLinux = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+RockyLinux = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Void = " "
+Windows = "󰍲 "
+
+
 [username]
 style_user = "green bold"
 style_root = "red bold"
-format = "[$user]($style) "
+format = "[$user]($style)"
 disabled = false
 show_always = true
 
 [hostname]
 ssh_only = false
-format = 'on [$hostname](bold purple) '
+format = ' on [$hostname](bold purple) '
 trim_at = "."
-disabled = false
+disabled = true # disabled
 
 # Replace the "❯" symbol in the prompt with "➜"
-[character]                            # The name of the module we are configuring is "character"
-success_symbol = "[➜](bold green)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
-error_symbol = "[✗](bold red)"
+[character]
+# success_symbol = "[➜](bold green)"
+# error_symbol = "[✗](bold red)"
+#
+# [character]
+success_symbol = "[❯](red)[❯](yellow)[❯](green)"
+error_symbol = "[❯](red)[❯](red)[❯](red)"
+vicmd_symbol = "[❮](green)[❮](yellow)[❮](red)"
 
 #  
 # configure directory
@@ -44,9 +111,6 @@ symbol = " "
 
 [dart]
 symbol = " "
-
-#[directory]
-#read_only = " "
 
 [docker_context]
 symbol = " "
@@ -123,7 +187,7 @@ symbol = " "
 
 [python]
 symbol = "🐍 "
-#pyenv_version_name = true
+pyenv_version_name = true
 format = 'via [${symbol}python (${version} )(\($virtualenv\) )]($style)'
 style = "bold yellow"
 pyenv_prefix = "venv "
@@ -150,3 +214,15 @@ symbol = "ﯣ "
 format = "via [ Node.js $version](bold green) "
 detect_files = ["package.json", ".node-version"]
 detect_folders = ["node_modules"]
+
+[localip]
+format = '[ at](fg:white bold)[ $localipv4 ](fg:purple bold)'
+ssh_only = true
+disabled = false
+
+[time]
+disabled = false
+format = "[ | $time |]($style)"
+time_format = "%R"
+utc_time_offset = "local"
+style = "dimmed white"

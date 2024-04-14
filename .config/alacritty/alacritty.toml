@@ -37,7 +37,7 @@ blinking = "On"
 shape = "Block"
 
 [font]
-size = 10
+size = 12
 
 [font.bold]
 family = "JetBrainsMono Nerd Font"
@@ -57,7 +57,7 @@ save_to_clipboard = false
 [window]
 decorations = "none"
 dynamic_title = true
-opacity = 1.0
+opacity = 0.83
 
 [window.padding]
 x = 15

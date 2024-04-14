@@ -34,8 +34,7 @@ font:
     #family: JetBrainsMono Nerd Font
     #style: Bold Italic
 
-  #size: 10
-  size: 11
+  size: 12
 
 # Colors (Tokyo Night) i0x5 Rice
 colors:

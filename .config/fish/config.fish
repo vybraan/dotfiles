@@ -14,10 +14,11 @@ set -U fish_user_paths $HOME/.bin  $HOME/.local/bin $HOME/.emacs.d/bin $HOME/App
 ### EXPORT ###
 set fish_greeting                                 # Supresses fish's intro message
 set TERM "xterm-256color"                         # Sets the terminal type
-set EDITOR "emacsclient -t -a ''"                 # $EDITOR use Emacs in terminal
-set VISUAL "emacsclient -c -a emacs"              # $VISUAL use Emacs in GUI mode
+set EDITOR "nvim"                 # $EDITOR use Emacs in terminal
+set VISUAL "nvim"              # $VISUAL use Emacs in GUI mode
 export FLYCTL_INSTALL="/home/neray/.fly"
-export PATH="$FLYCTL_INSTALL/bin:$PATH"
+export PATH="$HOME/.scripts/bin:$FLYCTL_INSTALL/bin:$PATH"
+
 
 ### SET MANPAGER
 ### Uncomment only one of these!
@@ -210,6 +211,11 @@ end
 # \x1b[2J   <- clears tty
 # \x1b[1;1H <- goes to (1, 1) (start)
 alias clear='echo -en "\x1b[2J\x1b[1;1H" ; echo; echo; seq 1 (tput cols) | sort -R | spark | lolcat; echo; echo'
+alias lynx='$HOME/.scripts/bin/lynx'
+alias mobile='scrcpy'
+alias 'search-duck'=duck
+alias 'search-goole'=google
+alias 'search-gpt'=gpt
 
 # dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
@@ -225,7 +231,7 @@ alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 
 # vim and emacs
-alias vim='nvim'
+# alias vim='nvim'
 alias em='/usr/bin/emacs -nw'
 alias emacs="emacsclient -c -a 'emacs'"
 
@@ -343,11 +349,7 @@ alias tips="lbrynet txo spend --type=support --is_not_my_input --blocking"
 # Mocp must be launched with bash instead of Fish!
 alias mocp="bash -c mocp"
 
-### DTOS ###
-# Copy/paste all content of /etc/dtos over to home folder. A backup of config is created. (Be careful running this!)
-alias dtoscopy='[ -d ~/.config ] || mkdir ~/.config && cp -Rf ~/.config ~/.config-backup-(date +%Y.%m.%d-%H.%M.%S) && cp -rf /etc/dtos/* ~'
-# Backup contents of /etc/dtos to a backup folder in $HOME.
-alias dtosbackup='cp -Rf /etc/dtos ~/dtos-backup-(date +%Y.%m.%d-%H.%M.%S)'
+
 
 ### RANDOM COLOR SCRIPT ###
 # Get this script from my GitLab: gitlab.com/dwt1/shell-color-scripts

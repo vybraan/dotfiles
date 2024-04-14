@@ -30,7 +30,7 @@ font:
     family: JetBrainsMono Nerd Font
     #style: Bold Italic
 
-  size: 10
+  size: 12
 
 # Colors (Onedark) i0x6 Rice
 colors:

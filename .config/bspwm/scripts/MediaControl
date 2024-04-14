@@ -15,7 +15,7 @@
 # 
 
 Control="MPD"
-[ -n "$(pgrep spotify)" ] && Control="spotify"
+# [ -n "$(pgrep spotify)" ] && Control="spotify"
 # [ -n "$(pgrep brave-bin)" ] && Control="brave-bin"
 # [ -n "$(pgrep rhythmbox)" ] && Control="rhythmbox"
 # [ -n "$(pgrep audacious)" ] && Control="audacious"
