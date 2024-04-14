@@ -78,6 +78,7 @@ function killeww() {
 
 function ReloadTerms() {
   cat $PDIR/alacrittyrc > $HOME/.config/alacritty/alacritty.yml
+  launch $HOME/.scripts/fix_alacritty.sh
 }
 
 function SetBspwmConf() {
@@ -287,7 +288,8 @@ bspc rule -a gimp-2.10 desktop=^7 follow=on state=tiled focus=on
 #  ├─┤│ │ │ │ │└─┐ │ ├─┤├┬┘ │   ├─┤├─┘├─┘└─┐
 #  ┴ ┴└─┘ ┴ └─┘└─┘ ┴ ┴ ┴┴└─ ┴   ┴ ┴┴  ┴  └─┘
 
-launch synergyc 192.168.8.101
+#launch synergyc 192.168.8.101
+launch synergys -c /home/neray/.synergy.conf
 RandomWall
 launch sxhkd -c ${BSPDIR}/sxhkdrc
 launch picom --config ${BSPDIR}/rices/$RICETHEME/picom.conf

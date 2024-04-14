@@ -57,8 +57,6 @@ save_to_clipboard = false
 [window]
 decorations = "none"
 dynamic_title = true
-#history = 10000
-#multiplier = 3
 opacity = 1.0
 
 [window.padding]

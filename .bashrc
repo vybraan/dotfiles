@@ -291,3 +291,5 @@ fi
 
 ### SETTING THE STARSHIP PROMPT ###
 eval "$(starship init bash)"
+export FLYCTL_INSTALL="$HOME/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
