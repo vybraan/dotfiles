@@ -1,0 +1,17 @@
+text/plain; $EDITOR %s ;
+# text/html; /usr/local/lib/mutt-wizard/openfile %s ; nametemplate=%s.html
+# text/html; lynx -assume_charset=%{charset} -display_charset=utf-8 -dump -width=1024 %s; nametemplate=%s.html; copiousoutput;
+text/html; w3m %s; nametemplate=%s.html; copiousoutput;
+
+application/vnd.openxmlformats-officedocument.wordprocessingml.document; sc-im  %s;  nametemplate=%s.docx
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; gnumeric %s;  nametemplate=%s.xlsx
+
+image/*; /usr/local/lib/mutt-wizard/openfile %s ;
+video/*; setsid mpv --quiet %s &; copiousoutput
+audio/*; mpv %s ;
+
+# application/pdf; /usr/local/lib/mutt-wizard/openfile %s ;
+application/pdf; zathura %s;
+application/pgp-encrypted; gpg -d '%s'; copiousoutput;
+application/pgp-keys; gpg --import '%s'; copiousoutput;
+application/x-subrip; $EDITOR %s ;
