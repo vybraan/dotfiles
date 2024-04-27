@@ -10,5 +10,7 @@ return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
   -- import/override with your plugins folder
-  { import = "transparent-nvim" },
+  { import = "astrocommunity.color.transparent-nvim" },
+  -- { import = "astrocommunity.utility.noice-nvim" },
+  -- { import = "transparent-nvim" },
 }
