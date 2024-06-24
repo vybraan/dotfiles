@@ -26,6 +26,8 @@ export PATH="$HOME/.scripts/bin:$FLYCTL_INSTALL/bin:$PATH"
 
 ### SETTING THE STARSHIP PROMPT ###
 starship init fish | source
+enable_transience
+
 ### Zoxide
 zoxide init fish | source
 
@@ -59,7 +61,13 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
 
 
+function starship_transient_prompt_func
+  starship module character
+end
 
+function starship_transient_rprompt_func
+  starship module time
+end
 
 
 ### SET MANPAGER
@@ -278,12 +286,13 @@ alias .5='cd ../../../../..'
 # alias vim='nvim'
 
 # Changing "ls" to "exa"
-alias ls="exa --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions --group-directories-first"
+# alias ls="exa --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions --group-directories-first"
+alias ls="exa --color=always --git --no-filesize --icons=always --no-time --no-user --no-permissions --group-directories-first"
 # alias ls='exa -a --color=always --icons=always --no-user --no-time --no-permissions --no-filesize --group-directories-first' # my preferred listing
 alias la='exa -al --color=always --group-directories-first'  # all files and dirs
 alias ll='exa -l --color=always --group-directories-first'  # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
-alias l.='exa -a  --color=always --long --no-filesize --icons=always --no-time --no-user --no-permissions --group-directories-first | grep -E "^\."'
+alias l.='exa -a  --color=always --long --no-filesize --icons=always --no-time --no-user --no-permissions --group-directories-first | egrep -E "^\."'
 
 # pacman and yay
 alias pacsyu='sudo pacman -Syu'                  # update only standard pkgs
@@ -384,4 +393,3 @@ alias mocp="bash -c mocp"
 # Get this script from GitLab: gitlab.com/dwt1/shell-color-scripts
 # Or install it from the Arch User Repository: shell-color-scripts
 # colorscript -e suckless
-
