@@ -112,7 +112,7 @@ color status default black ''
 
 # FOR V-FOLDER AND ATTACHMENT
 set vfolder_format = " %N %?n?%3n&   ?  %8m  · %f"
-set attach_format = "%u%D  %T%-75.75d %?T?%&   ? %5s · %m/%M"
+# set attach_format = "%u%D  %T%-75.75d %?T?%&   ? %5s · %m/%M"
 
 # FOR SIDEBAR
 set sidebar_format = '  %D%?Z? [%Z]?%* %?S?%S? '

@@ -3,22 +3,17 @@
 # set editor to neovim
 set editor = "nvim"
 
-# auto_view text/html
 set mail_check = "2"
 
 set my_name = "Ailton Baúque"
 set imap_check_subscribed
 
-# Set preffered view modes
-auto_view text/html text/calendar application/ics # view html automatically
-alternative_order text/html text/plain text/enriched text/*
-
 
 # main options
 set envelope_from
-set edit_headers                     # show headers when composing
+# set edit_headers                     # show headers when composing
 set fast_reply                       # skip to compose when replying
-set askcc                            # ask for CC:
+# set askcc                            # ask for CC:
 set fcc_attach                       # save attachments with the body
 set forward_format = "Fwd: %s"       # format of subject when forwarding
 set forward_decode                   # decode when forwarding
@@ -68,8 +63,19 @@ set menu_scroll
 set tilde
 unset markers
 
-set mailcap_path = ~/.config/mutt/mailcap
+# Set preffered view modes
+
+#### Content/Autoview
+auto_view application/ics
+auto_view text/calendar
+auto_view text/plain
+auto_view text/html
+auto_view application/pgp-encrypted
+alternative_order text/calendar application/ics text/plain text/enriched text/html
+
+
+# set mailcap_path = ~/.config/mutt/mailcap
 # set header_cache = "~/.cache/mutt"
 # set message_cachedir = "~/.cache/mutt"
 
-# set query_command = "khard email --parsable --search-in-source-files '%s'"
+set query_command = "abook --mutt-query '%s'"
