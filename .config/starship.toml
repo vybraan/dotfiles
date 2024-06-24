@@ -1,17 +1,21 @@
-#format = """
-#[╭─user───❯](bold blue) $username
-#[┣─system─❯](bold yellow) $hostname
-#[┣─project❯](bold red) $directory$rust$git_branch$git_state$git_status$package$golang$terraform$docker_context$python$docker_context$nodejs
-#[╰─cmd────❯](bold green)
-#"""
+add_newline = false
 
-format = """
-[╭─](bold green)$os$username$hostname$localip in $directory$package$java$python$git_branch$battery$cmd_duration
-[╰─](bold green)[$character](bold green) """
+# format = """$all$directory$git_branch${custom.git_status_dirty}$git_status$cmd_duration$status$character"""
 
-right_format = """
-$time\
-"""
+
+format = """$os$package$java$python$directory$character"""
+right_format = """$status$cmd_duration$git_branch$git_status"""
+
+# ------------- vybraan original
+# format = """
+# [╭─](bold green)$os$username$hostname$localip in $directory$package$java$python$git_branch$battery$cmd_duration
+# [╰─](bold green)[$character](bold green) """
+
+# right_format = """
+# $time\
+# """
+# palette = "catppuccin_mocha"
+# ------------ vybraan original
 
 # Customization and activation of some modules:
 # Listed in the order of their position in the module row above
@@ -85,9 +89,13 @@ disabled = true # disabled
 # error_symbol = "[✗](bold red)"
 #
 # [character]
-success_symbol = "[❯](red)[❯](yellow)[❯](green)"
-error_symbol = "[❯](red)[❯](red)[❯](red)"
-vicmd_symbol = "[❮](green)[❮](yellow)[❮](red)"
+# success_symbol = "[❯](red)[❯](yellow)[❯](green)"
+# error_symbol = "[❯](red)[❯](red)[❯](red)"
+# vicmd_symbol = "[❮](green)[❮](yellow)[❮](red)"
+success_symbol = "[⨠](green)"
+error_symbol = "[⨠](red)"
+vicmd_symbol = "[⪻](yellow)"
+
 
 #  
 # configure directory
@@ -226,3 +234,37 @@ format = "[ | $time |]($style)"
 time_format = "%R"
 utc_time_offset = "local"
 style = "dimmed white"
+
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+mauve = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"
+
+[directory.substitutions]
+'~/cypher/' = 'cypher'
+'~/networks/' = 'hacking'
+'~/devops/' = 'devops'
+
