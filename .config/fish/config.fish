@@ -268,6 +268,9 @@ alias 'search-duck'=duck
 alias 'search-goole'=google
 alias 'search-gpt'=gpt
 
+alias pbcopy='xsel --input --clipboard'
+alias pbpaste='xsel --output --clipboard'
+
 # dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
