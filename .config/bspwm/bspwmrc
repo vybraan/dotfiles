@@ -15,8 +15,8 @@ PDIR="$HOME/.config/bspwm/rices/$RICETHEME"
 SFILE="${BSPDIR}/scripts/.sys"
 
 ## You can edit this.
-BSPWM_BORDER='0'
-BSPWM_GAP='10'
+BSPWM_BORDER='2'
+BSPWM_GAP='30'
 
 #  ┌─┐┬ ┬┌┐┌┌─┐┌┬┐┬┌─┐┌┐┌┌─┐
 #  ├┤ │ │││││   │ ││ ││││└─┐
@@ -289,11 +289,12 @@ bspc rule -a gimp-2.10 desktop=^7 follow=on state=tiled focus=on
 #  ┴ ┴└─┘ ┴ └─┘└─┘ ┴ ┴ ┴┴└─ ┴   ┴ ┴┴  ┴  └─┘
 
 #launch synergyc 192.168.8.101
-launch synergys -c /home/neray/.synergy.conf
+launch barriers --no-tray --debug INFO --name alnky --disable-crypto -c /home/neray/.config/barrier/barrier.conf --address :24800
+#launch synergys -c /home/neray/.synergy.conf
 RandomWall
 launch sxhkd -c ${BSPDIR}/sxhkdrc
-launch picom --config ${BSPDIR}/rices/$RICETHEME/picom.conf
-#launch picom --legacy-backends --config ${BSPDIR}/rices/$RICETHEME/picom.conf
+#launch picom --config ${BSPDIR}/rices/$RICETHEME/picom.conf
+launch picom --legacy-backends --config ${BSPDIR}/rices/$RICETHEME/picom.conf
 xsetroot -cursor_name left_ptr
 	
 if ! pidof polkit-gnome-authentication-agent-1 > /dev/null; then
